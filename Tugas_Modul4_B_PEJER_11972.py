@@ -55,9 +55,9 @@ if uploaded_file is not None:
     st.dataframe(input_data)
 #model_path = r'SVR_IPK_model.pkl'
     model_path = {
-        "AGG_model": os.path.join(model_directory, r'AGG_model.pkl'),
-        "KMeans_model": os.path.join(model_directory, r'KMeans_model.pkl'),
-        "DBSCAN_model": os.path.join(model_directory, r'DBSCAN_model.pkl'),
+        "AGG_model": os.path.join(model_directory, 'AGG_model.pkl'),
+        "KMeans_model": os.path.join(model_directory, 'KMeans_model.pkl'),
+        "DBSCAN_model": os.path.join(model_directory, 'DBSCAN_model.pkl'),
     }
 
     # load ketiga model ke dalam dictionary
