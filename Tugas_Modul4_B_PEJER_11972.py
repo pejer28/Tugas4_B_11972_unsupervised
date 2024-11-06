@@ -54,11 +54,17 @@ if uploaded_file is not None:
     st.markdown("<h1 style='text-align: center;'>Unsupervised Learning - PEJER</h1>", unsafe_allow_html=True) 
     st.dataframe(input_data)
 #model_path = r'SVR_IPK_model.pkl'
+    # model_directory = 'models'
     model_path = {
-        "AGG_model": os.path.join(model_directory, 'AGG_model.pkl'),
-        "KMeans_model": os.path.join(model_directory, 'KMeans_model.pkl'),
-        "DBSCAN_model": os.path.join(model_directory, 'DBSCAN_model.pkl'),
+        r"AGG_model.pkl",
+        r"KMeans_model.pkl",
+        r"DBSCAN_model.pkl",
     }
+    # model_path = {
+    #     "AGG_model": os.path.join(model_directory, 'AGG_model.pkl'),
+    #     "KMeans_model": os.path.join(model_directory, 'KMeans_model.pkl'),
+    #     "DBSCAN_model": os.path.join(model_directory, 'DBSCAN_model.pkl'),
+    # }
 
     # load ketiga model ke dalam dictionary
     models = {}
