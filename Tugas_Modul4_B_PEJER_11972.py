@@ -51,16 +51,13 @@ uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["cs
 if uploaded_file is not None:
     input_data = pd.read_csv(uploaded_file)
 
-    st.markdown("<h1 style='text-align: center;'>Unsupervised Learning - EFAN</h1>", unsafe_allow_html=True) 
+    st.markdown("<h1 style='text-align: center;'>Unsupervised Learning - PEJER</h1>", unsafe_allow_html=True) 
     st.dataframe(input_data)
-
-    # direktori tempat penyimpanan ketiga model yang telah di dump sebelumnya
-    model_directory = r'D:\semester 5\Mesin Learning\Unsupervised Learning (Praktek)\Tugas4_B_11978'
-
+#model_path = r'SVR_IPK_model.pkl'
     model_path = {
-        "AGG_model": os.path.join(model_directory, r'AGG_model.pkl'),
-        "KMeans_model": os.path.join(model_directory, r'KMeans_model.pkl'),
-        "DBSCAN_model": os.path.join(model_directory, r'DBSCAN_model.pkl'),
+        r"AGG_model": os.path.join(model_directory, r'AGG_model.pkl'),
+        r"KMeans_model": os.path.join(model_directory, r'KMeans_model.pkl'),
+        r"DBSCAN_model": os.path.join(model_directory, r'DBSCAN_model.pkl'),
     }
 
     # load ketiga model ke dalam dictionary
